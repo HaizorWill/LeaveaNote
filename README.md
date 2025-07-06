@@ -6,3 +6,6 @@ Little installation guide:
 * Install php-fpm, preferrably 8.2+ and composer from https://getcomposer.org/, run composer install inside the project's directory
 * Set up your web-server, don't forget fastCGI!
 * Enjoy)
+
+How it looks:
+![image](https://github.com/user-attachments/assets/9e1cb420-0df7-4ea4-8764-22a909397c66)
