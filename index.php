@@ -24,7 +24,8 @@ use App\Controllers\NoteController;
     <div class="msglist">
         <?php
             $controller = new NoteController;
-            $notes = $controller->handleGET($_GET); ?>
+            $notes = $controller->handleGET($_GET);
+            $notes = array_reverse($notes); ?>
             <?php foreach ($notes as $note): ?>
                 <div class="message">
                     <span class="author"><?= htmlspecialchars($note['name'])?></span>
