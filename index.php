@@ -8,11 +8,12 @@ use App\Controllers\NoteController;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>leaveaNote</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>Leave a note!</h2>
+    <h2>LeaveaNote!</h2>
+    <h4>We don't code, we fucking spaghetti it!</h4>
     <div class="sendmsg">
         <form action="/Handlers/handle.php" method="POST">
             <input type="text" name="name" placeholder="Your name" required minlength="2" maxlength="24">
