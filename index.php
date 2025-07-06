@@ -1,5 +1,6 @@
 <?php
-require "/vendor/autoload.php";
+require __DIR__ . "/vendor/autoload.php";
+use App\Controllers\NoteController;
 ?>
 
 <!DOCTYPE html>
@@ -13,18 +14,22 @@ require "/vendor/autoload.php";
 <body>
     <h2>Leave a note!</h2>
     <div class="sendmsg">
-        <form>
-            <input type="text" id="name" placeholder="Your name" required>
-            <input type="text" id="message" placeholder="Leave a message" required>
+        <form action="/Handlers/handle.php" method="POST">
+            <input type="text" name="name" placeholder="Your name" required minlength="2" maxlength="24">
+            <input type="text" name="message" placeholder="Leave a message" required maxlength="128">
             <input type="submit" value="Got it!">
         </form>
     </div>
     <div class="msglist">
-        <?php ?>
-        <div class="message">
-            <span class="author">Author Name</span>
-            <span class="text">Message content goes here.</span>
-        </div>
+        <?php
+            $controller = new NoteController;
+            $notes = $controller->handleGET($_GET); ?>
+            <?php foreach ($notes as $note): ?>
+                <div class="message">
+                    <span class="author"><?= htmlspecialchars($note['name'])?></span>
+                    <span class="text"><?= htmlspecialchars($note['message'])?></span>
+                </div>
+        <?php endforeach; ?>
     </div>
 </body>
 </html>

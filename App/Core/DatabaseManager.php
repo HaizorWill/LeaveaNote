@@ -4,10 +4,11 @@ namespace App\Core;
 use MongoDB;
 
 class DatabaseManager {
-    protected static $instance;
-    protected static $dbClient;
     protected static $DB_URI;
     protected static $DB_DATABASE;
+    protected static $instance;
+    protected static $dbClient;
+    protected static $database;
 
     public function __construct() {
         $env = parse_ini_file(__DIR__ . '/../../.env');
@@ -26,11 +27,11 @@ class DatabaseManager {
     }
 
     public static function getDatabase() {
-        static $database = null;
-        if (!$database) {
-            $database = self::$dbClient->selectDatabase(self::$DB_DATABASE);
+        self::$database = null;
+        if (!self::$database) {
+            self::$database = self::$dbClient->selectDatabase(self::$DB_DATABASE);
         }
-        return $database;
+        return self::$database;
     }
 }
 ?>

@@ -13,55 +13,55 @@ body {
 }
 
 h2 {
-  margin-top: 48px;
+  margin-top: 3rem;
   font-weight: 500;
   color: #3f51b5;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
 }
 
 .sendmsg {
   background: #fff;
-  padding: 32px 24px 24px 24px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(60, 60, 60, 0.08);
-  margin: 32px 0 24px 0;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.125rem 0.5rem rgba(60, 60, 60, 0.08);
+  margin: 2rem 0 1.5rem 0;
   width: 100%;
-  max-width: 400px;
+  max-width: 35rem;
 }
 
 .sendmsg form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .sendmsg input[type="text"] {
-  padding: 12px 16px;
+  padding: 0.75rem 1rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 0.375rem;
   background: #f0f0f0;
   font-size: 1rem;
   transition: box-shadow 0.2s;
-  box-shadow: 0 1px 2px rgba(60, 60, 60, 0.03);
+  box-shadow: 0 0.0625rem 0.125rem rgba(60, 60, 60, 0.03);
 }
 
 .sendmsg input[type="text"]:focus {
   outline: none;
   background: #e8eaf6;
-  box-shadow: 0 0 0 2px #3f51b5;
+  box-shadow: 0 0 0 0.125rem #3f51b5;
 }
 
 .sendmsg input[type="submit"] {
   background: #3f51b5;
   color: #fff;
   border: none;
-  border-radius: 6px;
-  padding: 12px 0;
+  border-radius: 0.375rem;
+  padding: 0.75rem 0;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
   transition: background 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 4px rgba(60, 60, 60, 0.06);
+  box-shadow: 0 0.125rem 0.25rem rgba(60, 60, 60, 0.06);
 }
 
 .sendmsg input[type="submit"]:hover {
@@ -70,28 +70,28 @@ h2 {
 
 .msglist {
   width: 100%;
-  max-width: 400px;
-  margin-bottom: 48px;
+  max-width: 50rem;
+  margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 0.5rem;
 }
 
 .msglist .message {
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 1px 4px rgba(60, 60, 60, 0.07);
-  padding: 16px 20px;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.0625rem 0.25rem rgba(60, 60, 60, 0.07);
+  padding: 1rem 1.25rem;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 0.25rem;
   animation: fadeIn 0.5s;
 }
 
 .msglist .message .author {
   font-weight: 500;
   color: #3f51b5;
-  margin-bottom: 2px;
+  margin-bottom: 0.125rem;
   font-size: 1.05em;
 }
 
@@ -102,6 +102,6 @@ h2 {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
+  from { opacity: 0; transform: translateY(0.625rem); }
   to { opacity: 1; transform: translateY(0); }
 }
