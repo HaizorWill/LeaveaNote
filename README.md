@@ -7,5 +7,11 @@ Little installation guide:
 * Set up your web-server, don't forget fastCGI!
 * Enjoy)
 
+How to use in Docker:
+* Clone repo to wherever it's more convinient and cd into this folder
+* Run `docker build . -t leaveanote` and wait until build is complete
+* Launch the container via docker run or docker compose however you like it. For example: `docker run -p 80:80 -e DB_URI=mongodb.example.com -d leaveanote:latest`
+
+
 How it looks:
 ![image](https://github.com/user-attachments/assets/9e1cb420-0df7-4ea4-8764-22a909397c66)
