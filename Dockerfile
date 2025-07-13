@@ -3,6 +3,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 ENV APACHE_ROOT=/var/www/LeaveaNote
 ENV DB_URI=localhost
+ENV DB_DATABASE=leaveanote
 
 COPY . "${APACHE_ROOT}"
 RUN sed -ri -e "s!/var/www/html!${APACHE_ROOT}!g" /etc/apache2/sites-available/*.conf
